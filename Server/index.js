@@ -10,7 +10,7 @@ app.use(express.json());
 dotenv.config();
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/final")
+  .connect(process.env.MONGO_URL)
   .then((res) => console.log("Connected to db"))
   .catch((err) => console.log("Error"));
 
